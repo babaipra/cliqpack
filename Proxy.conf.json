@@ -1,0 +1,8 @@
+{  
+    "/api/*": {  
+       "target": "https://dev1.ivantechnology.in/cliqpack",  
+       "secure": false,  
+       "logLevel": "debug"   
+      
+    }  
+ }  
