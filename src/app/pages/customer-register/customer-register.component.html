@@ -1,0 +1,110 @@
+<section class="gry-bg py-4">
+    <div class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="text-center pt-4">
+                            <h1 class="h4 fw-600">
+                                Create an account.
+                            </h1>
+                        </div>
+                        <div class="px-4 py-3 py-lg-4">
+                            <div class="">
+                                <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="" placeholder="Full Name"
+                                            formControlName="name">
+                                            <div *ngIf="!name.valid && (name.dirty ||name.touched)">
+                                                <div [hidden]="!name.errors.required" class="form_validation_error">
+                                                  Name is required
+                                                </div>
+                                               
+                                              </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <input type="number" formControlName="phone" class="form-control" value=""
+                                            placeholder="Phone " name="phone" min="11">
+                                            <div *ngIf="!phone.valid && (phone.dirty ||phone.touched)">
+                                                <div [hidden]="!phone.errors.required" class="form_validation_error">
+                                                  Phone is required
+                                                </div>
+                                                
+                                              </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" value="" placeholder="Email"
+                                            formControlName="email">
+                                        <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+                                            <div [hidden]="!email.errors.required" class="form_validation_error">
+                                                Email is required
+                                            </div>
+                                            <div [hidden]="!email.errors.email" class="form_validation_error">
+                                                Invalid email id
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="password"
+                                            formControlName="password">
+                                            <div *ngIf="!password.valid && (password.dirty ||password.touched)">
+                                                <div [hidden]="!password.errors.required" class="form_validation_error">
+                                                  Password is required
+                                                </div>
+                                               
+                                              </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password"
+                                            formControlName="password_confirmation">
+                                            <div *ngIf="!password_confirmation.valid && (password_confirmation.dirty ||password_confirmation.touched)">
+                                                <div [hidden]="!password_confirmation.errors.required" class="form_validation_error">
+                                                    Confirmation Password is required
+                                                </div>
+                                               
+                                              </div>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label class="aiz-checkbox">
+                                            <input type="checkbox" name="checkbox_example_1" required=""
+                                                formControlName="checkbox_example_1">
+                                            <span class="opacity-60">By signing up you agree to our terms and
+                                                conditions.</span>
+                                            <span class="aiz-square-check"></span>
+                                        </label>
+                                        <div *ngIf="!checkbox_example_1.valid && (checkbox_example_1.dirty ||checkbox_example_1.touched)">
+                                            <div [hidden]="!checkbox_example_1.errors.required" class="form_validation_error">
+                                               Please check the terms and conditions
+                                            </div>
+                                           
+                                          </div>
+                                    </div>
+
+                                    <div class="mb-5">
+                                        <button type="submit" class="btn btn-primary btn-block fw-600" [disabled]="!regForm.valid">Create
+                                            Account</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-muted mb-0">Already have an account?</p>
+                                <a [routerLink]="['/login']">Log In</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

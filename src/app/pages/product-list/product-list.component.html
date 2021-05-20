@@ -1,0 +1,493 @@
+<div class="aiz-main-wrapper d-flex flex-column">
+
+
+    <section class="mb-4 pt-3">
+        <div class="container sm-px-0">
+            <form class="" id="search-form" action="" method="GET">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="aiz-filter-sidebar collapse-sidebar-wrap sidebar-xl sidebar-right z-1035">
+                            <div class="overlay overlay-fixed dark c-pointer" data-toggle="class-toggle"
+                                data-target=".aiz-filter-sidebar" data-same=".filter-sidebar-thumb"></div>
+                            <div class="collapse-sidebar c-scrollbar-light text-left">
+                                <div
+                                    class="d-flex d-xl-none justify-content-between align-items-center pl-3 border-bottom">
+                                    <h3 class="h6 mb-0 fw-600">Filters</h3>
+                                    <button type="button" class="btn btn-sm p-2 filter-sidebar-thumb"
+                                        data-toggle="class-toggle" data-target=".aiz-filter-sidebar" type="button">
+                                        <i class="las la-times la-2x"></i>
+                                    </button>
+                                </div>
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Categories
+                                    </div>
+                                    <div class="p-3">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <a class="text-reset fs-14 fw-600" href="#">
+                                                    <i class="las la-angle-left"></i>
+                                                    All categories
+                                                </a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-reset fs-14 fw-600" href="#">
+                                                    <i class="las la-angle-left"></i>
+                                                    {{cat_name}}
+                                                </a>
+                                            </li>
+                                            <!-- <li class="ml-4 mb-2">
+                                                <a class="text-reset fs-14" href="#">Formal</a>
+                                            </li>
+                                            <li class="ml-4 mb-2">
+                                                <a class="text-reset fs-14" href="#">Winder cloths</a>
+                                            </li>
+                                            <li class="ml-4 mb-2">
+                                                <a class="text-reset fs-14" href="#">Shirt</a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Price range
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-range-slider">
+                                            <div id="input-slider-range" data-range-value-min=" 110 "
+                                                data-range-value-max=" 15000 "></div>
+
+                                            <div class="row mt-2">
+                                                <div class="col-6">
+                                                    <span
+                                                        class="range-slider-value value-low fs-14 fw-600 opacity-70"
+                                                        data-range-value-low="250"
+                                                        id="input-slider-range-value-low"></span>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <span
+                                                        class="range-slider-value value-high fs-14 fw-600 opacity-70"
+                                                        data-range-value-high="5000"
+                                                        id="input-slider-range-value-high"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Filter by color
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-radio-inline">
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Black">
+                                                <input type="radio" name="color" value="#000000"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #000000;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Blue">
+                                                <input type="radio" name="color" value="#0000FF"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #0000FF;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Crimson">
+                                                <input type="radio" name="color" value="#DC143C"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #DC143C;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="FloralWhite">
+                                                <input type="radio" name="color" value="#FFFAF0"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #FFFAF0;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Peru">
+                                                <input type="radio" name="color" value="#CD853F"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #CD853F;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Beige">
+                                                <input type="radio" name="color" value="#F5F5DC"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #F5F5DC;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="DarkSlateBlue">
+                                                <input type="radio" name="color" value="#483D8B"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #483D8B;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Amethyst">
+                                                <input type="radio" name="color" value="#9966CC"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #9966CC;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="Aqua">
+                                                <input type="radio" name="color" value="#00FFFF"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #00FFFF;"></span>
+                                                </span>
+                                            </label>
+                                            <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip"
+                                                data-title="DarkRed">
+                                                <input type="radio" name="color" value="#8B0000"
+                                                    onchange="filter()">
+                                                <span
+                                                    class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+                                                    <span class="size-30px d-inline-block rounded"
+                                                        style="background: #8B0000;"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Filter by Silk
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-checkbox-list">
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_1[]" value="silk1"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>silk1</span>
+                                            </label>
+
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_1[]" value="silk2"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>silk2</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_1[]" value="Mulberry"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>Mulberry</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Filter by Fabric
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-checkbox-list">
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="fabric1"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>fabric1</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="fabric2"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>fabric2</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="cotton"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>cotton</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="politer"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>politer</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="heard cl"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>heard cloth</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="Silk"
+                                                    change="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>Silk</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_2[]" value="Cotton"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>Cotton</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Filter by material
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-checkbox-list">
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_6[]" value="material1"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>material1</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_6[]" value="material2"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>material2</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_6[]" value="cotton"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>cotton</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_6[]" value="fabric"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>fabric</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white shadow-sm rounded mb-3">
+                                    <div class="fs-15 fw-600 p-3 border-bottom">
+                                        Filter by size
+                                    </div>
+                                    <div class="p-3">
+                                        <div class="aiz-checkbox-list"> <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_7[]" value="size1"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>size1</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_7[]" value="size2"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>size2</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_7[]" value="X"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>X</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_7[]" value="XL"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>XL</span>
+                                            </label>
+                                            <label class="aiz-checkbox">
+                                                <input type="checkbox" name="attribute_7[]" value="M"
+                                                    onchange="filter()">
+                                                <span class="aiz-square-check"></span>
+                                                <span>M</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <ul class="breadcrumb bg-transparent p-0">
+                            <li class="breadcrumb-item opacity-50">
+                                <a class="text-reset" href="#">Home</a>
+                            </li>
+                            <li class="breadcrumb-item opacity-50">
+                                <a class="text-reset" href="#">All categories</a>
+                            </li>
+                            <li class="text-dark fw-600 breadcrumb-item">
+                                <a class="text-reset" href="#">"Men"</a>
+                            </li>
+                        </ul>
+
+                        <div class="text-left">
+                            <div class="d-flex">
+                                <div class="form-group w-200px">
+                                    <label class="mb-0 opacity-50">Sort By</label>
+                                    <select class="form-control form-control-sm aiz-selectpicker" name="sort_by"
+                                        onchange="filter()">
+                                        <option value="newest">Newest</option>
+                                        <option value="oldest">Oldest</option>
+                                        <option value="price-asc">Price low to high</option>
+                                        <option value="price-desc">Price high to low</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ml-auto mr-0 w-200px d-none d-md-block">
+                                    <label class="mb-0 opacity-50">Brands</label>
+                                    <select class="form-control form-control-sm aiz-selectpicker"
+                                        data-live-search="true" name="brand" onchange="filter()">
+                                        <option value="">All Brands</option>
+                                        <option value="levis">Levis</option>
+                                        <option value="mi">MI</option>
+                                        <option value="Raymond-IvGuX">Raymond</option>
+                                        <option value="Readme-hIwmu">Readme</option>
+                                        <option value="Samsung-HrG4t">Samsung</option>
+                                        <option value="Bharatsthali-oeMea">Bharatsthali</option>
+                                        <option value="Saree-creations-Ulj6W">Saree creations</option>
+                                        <option value="Calvin-Klein-joSuW">Calvin Klein</option>
+                                        <option value="Brindal-b1dk4">Brindal</option>
+                                        <option value="Rupkatha-LbGbs">Rupkatha</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ml-2 mr-0 w-200px d-none d-md-block">
+                                    <label class="mb-0 opacity-50">Sellers</label>
+                                    <select class="form-control form-control-sm aiz-selectpicker"
+                                        data-live-search="true" name="seller_id" onchange="filter()">
+                                        <option value="">All Sellers</option>
+                                        <option value="1">Demo Seller Shop</option>
+                                        <option value="2">Deb Shop</option>
+                                        <option value="3">demo</option>
+                                        <option value="4">Anirban Cliqpack Store</option>
+                                    </select>
+                                </div>
+                                <div class="d-xl-none ml-auto ml-md-3 mr-0 form-group align-self-end">
+                                    <button type="button" class="btn btn-icon p-0" data-toggle="class-toggle"
+                                        data-target=".aiz-filter-sidebar">
+                                        <i class="la la-filter la-2x"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="min_price" value="11">
+                        <input type="hidden" name="max_price" value="22">
+                        <div class="row gutters-5 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-4 row-cols-md-3 row-cols-2">
+                           
+                           
+                            <div class="col mb-3" *ngFor="let item of products" >
+                                <div
+                                    class="aiz-card-box h-100 border border-light rounded shadow-sm hov-shadow-md has-transition bg-white">
+                                    <div class="position-relative">
+                                        <a [routerLink]="['/product',item.slug]" class="d-block">
+                                            <img class="img-fit lazyload mx-auto h-160px h-md-220px h-xl-270px h-xxl-250px"
+                                                src="{{item.productImage}}">
+                                        </a>
+                                        <div class="absolute-top-right aiz-p-hov-icon">
+
+                                        </div>
+                                    </div>
+                                    <div class="p-2 text-left cart-sec-box">
+                                        <div class="fs-15">
+                                            <a [routerLink]="['/product',item.slug]" class="d-block text-reset">{{item.name}}</a>
+                                            <div class="d-flex  align-items-center  justify-content-start">
+                                                <del class="d-price">৳{{item.purchase_price}}  </del>
+                                                <span class="price-amount">৳{{item.price}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="rating-box">
+                                            <div class="rating rating-sm mt-1">
+                                                {{item.rating}}<i class="la la-star"></i>
+                                            </div>
+                                            <span>({{item.availableqty}})</span>
+                                        </div>
+
+                                        <div>
+                                            <div
+                                                class="d-flex align-items-center  justify-content-between view-box">
+                                                <a href="javascript:void(0)" onclick="addToWishList(71)"
+                                                    data-toggle="tooltip" data-title="Add to wishlist"
+                                                    data-placement="left">
+                                                    <i class="la la-heart-o"></i>
+                                                </a>
+                                                <a href="#" onclick="getproduct_details(71)" data-toggle="tooltip"
+                                                    data-title="View" data-placement="left">
+
+                                                    <i class="las la-eye"></i>
+                                                </a>
+
+                                            </div>
+                                            <div class="text-center w-100">
+                                                <button type="button" onclick="showAddToCartModal(71)"
+                                                    class="btn w-100 add-to-cart">Add to Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="aiz-pagination aiz-pagination-center mt-4">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                                        <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                                    </li>
+                                    <li class="page-item active" aria-current="page"><span
+                                            class="page-link">1</span></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" rel="next" aria-label="Next »">&rsaquo;</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+
+
+
+</div>

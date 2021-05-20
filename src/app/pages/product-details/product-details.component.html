@@ -1,0 +1,1061 @@
+<div class="aiz-main-wrapper d-flex flex-column">
+
+        
+    <section class="mb-4 pt-3">
+
+        <div class="container">
+
+            <div class="bg-white shadow-sm rounded p-3">
+
+                <div class="row">
+
+                    <div class="col-xl-5 col-lg-6">
+
+                        <div class="sticky-top z-3 row gutters-10 flex-row-reverse"  *ngFor="let pro_image of productImage">
+
+                            
+                            <div class="col">
+
+                                <div class="aiz-carousel product-gallery" data-nav-for='.product-gallery-thumb' data-fade='true'>                                   
+                                    <div class="carousel-box img-zoom rounded">
+                                        <img class="img-fluid lazyload" src="{{pro_image}}">
+                                    </div>                                   
+                                </div>
+                                
+                            </div>
+
+                            <div class="col-auto w-80px">
+
+                                <div class="aiz-carousel carousel-thumb product-gallery-thumb" data-items='5' data-nav-for='.product-gallery' data-vertical='true' data-focus-select='true' data-arrows='true'>
+                                  
+                                    <div class="carousel-box c-pointer border p-1 rounded">
+                                        <img class="lazyload mw-100 size-50px mx-auto" src="{{pro_image}}">
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-xl-7 col-lg-6">
+
+                        <div class="text-left">
+
+                            <h1 class="mb-2 fs-20 fw-600">
+
+                                {{product.name}}
+
+                            </h1>
+
+
+
+                            <div class="row align-items-center">
+
+                                <div class="col-6">
+
+                                </div>
+
+                                <div class="col-6 text-right">
+                                    <span class="badge badge-md badge-inline badge-pill badge-success">In stock</span>                                   
+                                </div>
+
+                            </div>
+
+
+
+                            <hr>
+
+
+
+                            <div class="row align-items-center">
+
+                                <div class="col-auto">
+
+                                    <small class="mr-2 opacity-50">Sold By: </small><br>
+
+                                    
+                                    {{sellerinfo.name}}
+
+
+                                    
+                                </div>
+
+                                
+                                    <div class="col-auto">
+
+                                        <button class="btn btn-sm btn-soft-primary" >Message Seller</button>
+
+                                    </div>
+
+                                
+
+
+                                
+                                    <div class="col-auto">
+
+                                        <img src="{{sellerinfo.profileimage}}" *ngIf="sellerinfo.profileimage!=null" alt="Raymond" height="30">
+
+                                    </div>
+
+                                
+                            </div>
+
+
+
+                            <hr>
+
+
+
+                            
+                                <div class="row no-gutters mt-3">
+
+                                    <div class="col-sm-2">
+
+                                        <div class="opacity-50 my-2">Price:</div>
+
+                                    </div>
+
+                                    <div class="col-sm-10">
+
+                                        <div class="">
+
+                                            <strong class="h2 fw-600 text-primary">
+
+                                                ৳ {{product.home_discounted_base_price}}
+
+                                            </strong>
+
+                                            <span class="opacity-70">/{{product.availableQty}}</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            
+                            <span class="rating">
+                                     <i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i> 
+                                     <i class="la la-star"></i>
+
+                              </span>
+                              <div class="row no-gutters mt-4">
+                                 <div class="col-sm-2">
+                                    <div class="opacity-50 my-2">
+                                    Delivery
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-10">
+                                    <input type="text" placeholder="Delivery to"/>
+                                 </div>
+                              </div>
+
+
+
+                            
+
+
+                            <hr>
+
+
+
+                            <form id="option-choice-form">
+
+                                <input type="hidden" name="_token" value="zugOCHknZufr93Gw3LDd44qtUKFIol38BPHG7yNb">
+                                <input type="hidden" name="id" value="71">
+
+
+
+                                
+                                    
+
+
+                                    <div class="row no-gutters">
+
+                                        <div class="col-sm-2">
+
+                                            <div class="opacity-50 my-2">Silk:</div>
+
+                                        </div>
+
+                                        <div class="col-sm-10">
+
+                                            <div class="aiz-radio-inline">
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_1"
+
+                                                        value="silk1"
+
+                                                         checked 
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        silk1
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_1"
+
+                                                        value="silk2"
+
+                                                        
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        silk2
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    
+
+
+                                    <div class="row no-gutters">
+
+                                        <div class="col-sm-2">
+
+                                            <div class="opacity-50 my-2">Fabric:</div>
+
+                                        </div>
+
+                                        <div class="col-sm-10">
+
+                                            <div class="aiz-radio-inline">
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_2"
+
+                                                        value="fabric1"
+
+                                                         checked 
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        fabric1
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_2"
+
+                                                        value="fabric2"
+
+                                                        
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        fabric2
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    
+
+
+                                    <div class="row no-gutters">
+
+                                        <div class="col-sm-2">
+
+                                            <div class="opacity-50 my-2">material:</div>
+
+                                        </div>
+
+                                        <div class="col-sm-10">
+
+                                            <div class="aiz-radio-inline">
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_6"
+
+                                                        value="material1"
+
+                                                         checked 
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        material1
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_6"
+
+                                                        value="material2"
+
+                                                        
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        material2
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    
+
+
+                                    <div class="row no-gutters">
+
+                                        <div class="col-sm-2">
+
+                                            <div class="opacity-50 my-2">size:</div>
+
+                                        </div>
+
+                                        <div class="col-sm-10">
+
+                                            <div class="aiz-radio-inline">
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_7"
+
+                                                        value="size1"
+
+                                                         checked 
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        size1
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="attribute_id_7"
+
+                                                        value="size2"
+
+                                                        
+                                                    >
+
+                                                    
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center py-2 px-3 mb-2">
+
+                                                        size2
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    
+                                
+
+
+                                
+                                    <div class="row no-gutters">
+
+                                        <div class="col-sm-2">
+
+                                            <div class="opacity-50 my-2">Color:</div>
+
+                                        </div>
+
+                                        <div class="col-sm-10">
+
+                                            <div class="aiz-radio-inline">
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip" data-title="Black">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="color"
+
+                                                        value="#000000"
+
+                                                         checked 
+                                                    >
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+
+                                                        <span class="size-30px d-inline-block rounded" style="background: #000000;"></span>
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                                <label class="aiz-megabox pl-0 mr-2" data-toggle="tooltip" data-title="Blue">
+
+                                                    <input
+
+                                                        type="radio"
+
+                                                        name="color"
+
+                                                        value="#0000FF"
+
+                                                        
+                                                    >
+
+                                                    <span class="aiz-megabox-elem rounded d-flex align-items-center justify-content-center p-1 mb-2">
+
+                                                        <span class="size-30px d-inline-block rounded" style="background: #0000FF;"></span>
+
+                                                    </span>
+
+                                                </label>
+
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <hr>
+
+                                
+
+
+                                <!-- Quantity + Add to cart -->
+
+                                <div class="row no-gutters">
+
+                                    <div class="col-sm-2">
+
+                                        <div class="opacity-50 my-2">Quantity:</div>
+
+                                    </div>
+
+                                    <div class="col-sm-10">
+
+                                        <div class="product-quantity d-flex align-items-center">
+
+                                            <div class="row no-gutters align-items-center aiz-plus-minus mr-3" style="width: 130px;">
+
+                                                <button class="btn col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="minus" data-field="quantity" disabled="">
+
+                                                    <i class="las la-minus"></i>
+
+                                                </button>
+
+                                                <input type="text" name="quantity" class="col border-0 text-center flex-grow-1 fs-16 input-number" placeholder="1" value="10" min="10" max="10" readonly>
+
+                                                <button class="btn  col-auto btn-icon btn-sm btn-circle btn-light" type="button" data-type="plus" data-field="quantity">
+
+                                                    <i class="las la-plus"></i>
+
+                                                </button>
+
+                                            </div>
+
+                                            <div class="avialable-amount opacity-60">(<span id="available-quantity">320</span> available)</div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <hr>
+
+
+
+                                <div class="row no-gutters pb-3 d-none" id="chosen_price_div">
+
+                                    <div class="col-sm-2">
+
+                                        <div class="opacity-50 my-2">Total Price:</div>
+
+                                    </div>
+
+                                    <div class="col-sm-10">
+
+                                        <div class="product-price">
+
+                                            <strong id="chosen_price" class="h4 fw-600 text-primary">
+
+
+
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </form>
+
+
+
+                            <div class="mt-3">
+
+                                
+                                    <button type="button" class="btn btn-soft-primary mr-2 add-to-cart fw-600" onclick="addToCart()">
+
+                                        <i class="las la-shopping-bag"></i>
+
+                                        <span class="d-none d-md-inline-block"> Add to cart</span>
+
+                                    </button>
+
+                                    <button type="button" class="btn btn-primary buy-now fw-600" onclick="buyNow()">
+
+                                        <i class="la la-shopping-cart"></i> Buy Now
+
+                                    </button>
+
+                                
+                            </div>
+                           
+                            
+                            <div class="row no-gutters mt-4">
+
+                                <div class="col-sm-2">
+
+                                    <div class="opacity-50 my-2">Share:</div>
+
+                                </div>
+
+                                <div class="col-sm-10">
+
+                                    <div class="aiz-share"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="mb-4">
+
+        <div class="container">
+
+            <div class="row gutters-10">
+
+                <div class="col-xl-3 order-1 order-xl-0">
+
+                    <div class="bg-white shadow-sm mb-3">
+
+                        <div class="position-relative p-3 text-left">
+
+                            
+                            <div class="opacity-50 fs-12 border-bottom">Sold By</div>
+
+                            
+                                <div class="fw-600"></div>
+
+                            
+                            
+
+
+                            <div class="text-center border rounded p-2 mt-3">
+
+                                <div class="rating">
+
+                                    
+                                        <i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star half'></i><i class = 'las la-star'></i>
+
+                                    
+                                </div>
+
+                                <div class="opacity-60 fs-12">(2 customer reviews)</div>
+
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="bg-white rounded shadow-sm mb-3">
+
+                        <div class="p-3 border-bottom fs-16 fw-600">
+
+                            Top Selling Products
+
+                        </div>
+
+                        <div class="p-3">
+
+                            <ul class="list-group list-group-flush">
+
+                                
+                                <li class="py-3 px-0 list-group-item border-light">
+
+                                    <div class="row gutters-10 align-items-center">
+
+                                        <div class="col-5">
+
+                                            <a href="#" class="d-block text-reset">
+
+                                                <img
+
+                                                    class="img-fit lazyload h-xxl-110px h-xl-80px h-120px"
+
+                                                    src="https://via.placeholder.com/150">
+
+                                            </a>
+
+                                        </div>
+
+                                        <div class="col-7 text-left">
+
+                                            <h4 class="fs-13 text-truncate-2">
+
+                                                <a href="https://dev1.ivantechnology.in/cliqpack/product/my-t-shirt-cb9ka" class="d-block text-reset">My T-Shirt</a>
+
+                                            </h4>
+
+                                            <div class="rating rating-sm mt-1">
+
+                                                <i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star'></i><i class = 'las la-star'></i>
+
+                                            </div>
+
+                                            <div class="mt-2">
+
+                                                <span class="fs-17 fw-600 text-primary">৳109.989</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xl-9 order-0 order-xl-1">
+
+                    <div class="bg-white mb-3 shadow-sm rounded">
+
+                        <div class="nav border-bottom aiz-nav-tabs">
+
+                            <a href="#tab_default_1" data-toggle="tab" class="p-3 fs-16 fw-600 text-reset active show">Description</a>
+
+                            
+                                <a href="#tab_default_2" data-toggle="tab" class="p-3 fs-16 fw-600 text-reset">Video</a>
+
+                            
+                            
+                                <a href="#tab_default_4" data-toggle="tab" class="p-3 fs-16 fw-600 text-reset">Reviews</a>
+
+                        </div>
+
+
+
+                        <div class="tab-content pt-0">
+
+                            <div class="tab-pane fade active show" id="tab_default_1">
+
+                                <div class="p-4">
+
+                                    <div class="mw-100 overflow-hidden text-left">
+
+                                        <div class="_2418kt">
+<ul>
+<li class="_21Ahn-">prited lorem</li>
+</ul>
+</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="tab-pane fade" id="tab_default_2">
+
+                                <div class="p-4">
+
+                                    <div class="embed-responsive embed-responsive-16by9">
+
+                                        
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5qap5aO4i9A"></iframe>
+
+                                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="tab_default_3">
+
+                                <div class="p-4 text-center ">
+
+                                    <a href="" class="btn btn-primary">Download</a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="tab_default_4">
+
+                                <div class="p-4">
+
+                                    <ul class="list-group list-group-flush">
+
+                                        
+                                    </ul>
+
+
+
+                                    
+                                        <div class="text-center fs-18 opacity-70">
+
+                                            There have been no reviews for this product yet.
+
+                                        </div>
+
+                                    
+
+
+                                    
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded shadow-sm">
+
+                        <div class="border-bottom p-3">
+
+                            <h3 class="fs-16 fw-600 mb-0">
+
+                                <span class="mr-4">Related products</span>
+
+                            </h3>
+
+                        </div>
+
+                        <div class="p-3">
+
+                            <div class="aiz-carousel gutters-5 half-outside-arrow" data-items="5" data-xl-items="3" data-lg-items="4"  data-md-items="3" data-sm-items="2" data-xs-items="2" data-arrows='true' data-infinite='true'>
+
+                                
+                                <div class="carousel-box">
+
+                                    <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+
+                                        <div class="">
+
+                                            <a href="#" class="d-block">
+                                                <img class="img-fit lazyload mx-auto h-140px h-md-210px" src="https://via.placeholder.com/150">
+                                            </a>
+
+                                        </div>
+
+                                        <div class="p-md-3 p-2 text-left">
+
+                                            <div class="fs-15">
+
+                                                
+                                                    <del class="fw-600 opacity-50 mr-1">৳250.500</del>
+
+                                                
+                                                <span class="fw-700 text-primary">৳249.999</span>
+
+                                            </div>
+
+                                            <div class="rating rating-sm mt-1">
+
+                                                <i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i>
+
+                                            </div>
+
+                                            <h3 class="fw-600 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px">
+
+                                                <a href="#" class="d-block text-reset">my Towel</a>
+
+                                            </h3>
+
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                
+                                <div class="carousel-box">
+
+                                    <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+
+                                        <div class="">
+
+                                            <a href="https://dev1.ivantechnology.in/cliqpack/product/my-shervani-zqfar" class="d-block">
+
+                                                <img
+
+                                                    class="img-fit lazyload mx-auto h-140px h-md-210px"
+
+                                                    src="https://via.placeholder.com/150"
+
+                                                    data-src="https://dev1.ivantechnology.in/cliqpack/public/uploads/all/G7RKPJ8LIV5flpwcQLEdITb4evnecxf0qb6Acq0q.jpg"
+
+                                                    alt="my Shervani"
+
+                                                    onerror="this.onerror=null;this.src='https://dev1.ivantechnology.in/cliqpack/public/assets/img/placeholder.jpg';"
+
+                                                >
+
+                                            </a>
+
+                                        </div>
+
+                                        <div class="p-md-3 p-2 text-left">
+
+                                            <div class="fs-15">
+
+                                                
+                                                    <del class="fw-600 opacity-50 mr-1">৳5,500.000</del>
+
+                                                
+                                                <span class="fw-700 text-primary">৳4,950.000</span>
+
+                                            </div>
+
+                                            <div class="rating rating-sm mt-1">
+
+                                                <i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star active'></i><i class = 'las la-star'></i>
+
+                                            </div>
+
+                                            <h3 class="fw-600 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px">
+
+                                                <a href="https://dev1.ivantechnology.in/cliqpack/product/my-shervani-zqfar" class="d-block text-reset">my Shervani</a>
+
+                                            </h3>
+
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                
+                                <div class="carousel-box">
+
+                                    <div class="aiz-card-box border border-light rounded hov-shadow-md my-2 has-transition">
+
+                                        <div class="">
+
+                                            <a href="https://dev1.ivantechnology.in/cliqpack/product/my-tshurt-vio84" class="d-block">
+
+                                                <img
+
+                                                    class="img-fit lazyload mx-auto h-140px h-md-210px"
+
+                                                    src="https://via.placeholder.com/150"
+
+                                                    data-src="https://dev1.ivantechnology.in/cliqpack/public/uploads/all/Xdxvmqh6DCiZIJu58JKYyxYy152W5cxfsQMDO1Dw.jpg"
+
+                                                    alt="my tshurt"
+
+                                                    onerror="this.onerror=null;this.src='https://dev1.ivantechnology.in/cliqpack/public/assets/img/placeholder.jpg';"
+
+                                                >
+
+                                            </a>
+
+                                        </div>
+
+                                        <div class="p-md-3 p-2 text-left">
+
+                                            <div class="fs-15">
+
+                                                
+                                                    <del class="fw-600 opacity-50 mr-1">৳2,502.500</del>
+
+                                                
+                                                <span class="fw-700 text-primary">৳2,497.495</span>
+
+                                            </div>
+
+                                            <div class="rating rating-sm mt-1">
+
+                                                <i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i><i class = 'las la-star'></i>
+
+                                            </div>
+
+                                            <h3 class="fw-600 fs-13 text-truncate-2 lh-1-4 mb-0 h-35px">
+
+                                                <a href="https://dev1.ivantechnology.in/cliqpack/product/my-tshurt-vio84" class="d-block text-reset">my tshurt</a>
+
+                                            </h3>
+
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </div>

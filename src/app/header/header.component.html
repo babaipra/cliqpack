@@ -178,7 +178,9 @@
                 </div>
                 <div class="d-none d-lg-block ml-3 mr-0 user-login">
                     <div class="" id="user_login">
-                        <a href="/login"><i class="la la-user la-2x"></i>Login</a>
+                        
+                        <a [routerLink]="['/login']" *ngIf="!log_val"><i class="la la-user la-2x"></i>Login</a>
+                        <a  *ngIf="log_val" (click)="logOut()"><i class="la la-user la-2x"></i>Logout</a>
                     </div>
                 </div>
             </div>
